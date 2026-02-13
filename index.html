@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Página Premium de Alta Conversão</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background: radial-gradient(circle at 20% 20%, rgba(139,30,30,0.4), transparent 40%),
+            radial-gradient(circle at 80% 80%, rgba(217,74,30,0.3), transparent 40%),
+            linear-gradient(180deg, #0F0F0F 0%, #1a0f0f 100%);
+color:#fff;
+line-height:1.6;
+overflow-x:hidden;
+position:relative;
+}
+
+/* CONTAINER CENTRAL */
+.container{
+max-width:1200px;
+margin:0 auto;
+padding:0 30px;
+}
+
+/* SEÇÕES */
+section{
+padding:120px 0;
+position:relative;
+text-align:center;
+}
+
+            *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html,body{
+width:100%;
+overflow-x:hidden;
+}
+
+body{
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+            
+section:not(:last-child)::after{
+content:"";
+position:absolute;
+bottom:0;
+left:50%;
+transform:translateX(-50%);
+width:120px;
+height:2px;
+background:linear-gradient(90deg, transparent, #D94A1E, transparent);
+opacity:0.3;
+}
+
+/* TIPOGRAFIA */
+h1{
+font-size:56px;
+font-weight:800;
+letter-spacing:-1px;
+}
+
+h2{
+font-size:40px;
+margin-bottom:20px;
+}
+
+h3{
+font-size:22px;
+margin-top:20px;
+}
+
+p{
+max-width:750px;
+margin:0 auto 25px auto;
+color:#d0d0d0;
+}
+
+/* BOTÕES */
+.btn{
+display:inline-block;
+padding:18px 45px;
+border-radius:60px;
+font-weight:600;
+font-size:16px;
+text-decoration:none;
+transition:0.4s;
+}
+
+.btn-primary{
+background:linear-gradient(135deg,#8B1E1E,#D94A1E);
+box-shadow:0 15px 40px rgba(217,74,30,0.4);
+color:#fff;
+}
+
+.btn-primary:hover{
+transform:translateY(-4px);
+box-shadow:0 20px 60px rgba(217,74,30,0.6);
+}
+
+.btn-whatsapp{
+border:2px solid #D94A1E;
+color:#D94A1E;
+margin-left:15px;
+}
+
+.btn-whatsapp:hover{
+background:#D94A1E;
+color:#fff;
+}
+
+/* HERO */
+.hero{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+
+.hero::before{
+content:"";
+position:absolute;
+width:600px;
+height:600px;
+background:radial-gradient(circle, rgba(217,74,30,0.4) 0%, transparent 70%);
+filter:blur(120px);
+z-index:-1;
+}
+
+/* PROBLEMA */
+/* ===== SEÇÃO PROBLEMA REFINADA ===== */
+
+.problema-sub{
+max-width:700px;
+margin:20px auto 60px auto;
+color:#cfcfcf;
+font-size:18px;
+}
+
+.problema-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:40px;
+margin-top:20px;
+}
+
+.problema-item{
+background:rgba(255,255,255,0.03);
+border:1px solid rgba(217,74,30,0.15);
+border-radius:20px;
+padding:35px;
+display:flex;
+align-items:flex-start;
+gap:20px;
+transition:0.4s ease;
+text-align:left;
+}
+
+.problema-item:hover{
+border:1px solid rgba(217,74,30,0.5);
+transform:translateY(-5px);
+box-shadow:0 15px 40px rgba(217,74,30,0.15);
+}
+
+.problema-icon{
+min-width:40px;
+margin-top:3px;
+}
+
+/* SOLUÇÃO */
+.solucao{
+background:rgba(255,255,255,0.03);
+border-radius:30px;
+padding:80px 40px;
+backdrop-filter:blur(12px);
+border:1px solid rgba(217,74,30,0.15);
+}
+
+/* BENEFÍCIOS */
+.beneficios{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
+margin-top:70px;
+}
+
+.card{
+background:rgba(255,255,255,0.03);
+border-radius:24px;
+padding:50px 40px;
+border:1px solid rgba(217,74,30,0.15);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+border:1px solid rgba(217,74,30,0.6);
+box-shadow:0 20px 50px rgba(217,74,30,0.2);
+}
+
+.icon{
+margin-bottom:20px;
+}
+
+/* PROVA SOCIAL */
+.depoimentos{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
+margin-top:70px;
+}
+
+.depoimento{
+background:rgba(255,255,255,0.03);
+border-radius:24px;
+padding:40px;
+border:1px solid rgba(217,74,30,0.15);
+}
+
+.estrelas{
+color:#D94A1E;
+margin-bottom:15px;
+}
+
+/* OFERTA */
+.oferta{
+background:linear-gradient(135deg,#8B1E1E,#D94A1E);
+border-radius:30px;
+padding:80px 40px;
+margin:120px auto;
+max-width:900px;
+box-shadow:0 25px 80px rgba(217,74,30,0.4);
+}
+
+.preco-antigo{
+text-decoration:line-through;
+font-size:24px;
+opacity:0.8;
+}
+
+.preco-novo{
+font-size:56px;
+font-weight:800;
+margin:15px 0;
+}
+
+/* GARANTIA */
+.garantia{
+max-width:800px;
+margin:0 auto;
+}
+
+/* CTA FINAL */
+.cta-final h2{
+font-size:44px;
+margin-bottom:40px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+
+h1{
+font-size:34px;
+}
+
+h2{
+font-size:28px;
+}
+
+section{
+padding:80px 0;
+}
+
+.oferta{
+margin:80px 20px;
+}
+
+.btn-whatsapp{
+margin-left:0;
+margin-top:15px;
+}
+}
+
+    /* ===== FUNDO GEOMÉTRICO ===== */
+
+.bg-geometry{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-3;
+overflow:hidden;
+pointer-events:none;
+}
+
+/* LISTRAS DIAGONAIS SUAVES */
+.bg-geometry::before{
+content:"";
+position:absolute;
+width:200%;
+height:200%;
+background:repeating-linear-gradient(
+45deg,
+rgba(217,74,30,0.04) 0px,
+rgba(217,74,30,0.04) 2px,
+transparent 2px,
+transparent 40px
+);
+animation:moveStripes 20s linear infinite;
+}
+
+/* MOVIMENTO DAS LISTRAS */
+@keyframes moveStripes{
+from{ transform:translate(0,0); }
+to{ transform:translate(-200px,-200px); }
+}
+
+/* QUADRADOS FLUTUANDO */
+.bg-geometry span{
+position:absolute;
+display:block;
+background:rgba(217,74,30,0.08);
+border:1px solid rgba(217,74,30,0.15);
+animation:floatBox 15s linear infinite;
+}
+
+/* ANIMAÇÃO */
+@keyframes floatBox{
+0%{
+transform:translateY(0) rotate(0deg);
+opacity:0.4;
+}
+100%{
+transform:translateY(-1200px) rotate(360deg);
+opacity:0;
+}
+}
+    
+</style>
+</head>
+
+<div class="bg-geometry"></div>
+
+<body>
+
+<div class="container">
+
+<!-- HERO -->
+<section class="hero">
+<h1>Transforme Sua Presença Digital em Uma Máquina de Vendas</h1>
+<p>Design cinematográfico, estratégia persuasiva e posicionamento de alto valor para destacar sua marca.</p>
+<div>
+<a href="#oferta" class="btn btn-primary">QUERO MEU PROJETO AGORA</a>
+<a href="https://wa.me/5582987354607?text=Ola%20Quero%20Meu%20Projeto%20Agora." class="btn btn-whatsapp">FALAR NO WHATSAPP</a>
+</div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="problema reveal">
+
+  <h2>Enquanto Você Espera… Seus Concorrentes Estão Crescendo</h2>
+
+  <p class="problema-sub">
+    A maioria das empresas não perde clientes por falta de qualidade…
+    Perde por falta de posicionamento estratégico.
+  </p>
+
+  <div class="problema-grid">
+
+    <div class="problema-item">
+      <div class="problema-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D94A1E" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/>
+        </svg>
+      </div>
+      <p>Seu site não transmite autoridade nem confiança imediata.</p>
+    </div>
+
+    <div class="problema-item">
+      <div class="problema-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D94A1E" stroke-width="2">
+          <path d="M3 17L9 11L13 15L21 7"/>
+        </svg>
+      </div>
+      <p>Visitantes entram… mas não sentem segurança para comprar.</p>
+    </div>
+
+    <div class="problema-item">
+      <div class="problema-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D94A1E" stroke-width="2">
+          <path d="M12 20V10"/>
+          <path d="M18 20V4"/>
+          <path d="M6 20V16"/>
+        </svg>
+      </div>
+      <p>Baixa conversão mesmo com tráfego pago.</p>
+    </div>
+
+    <div class="problema-item">
+      <div class="problema-icon">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D94A1E" stroke-width="2">
+          <path d="M12 2L19 21H5L12 2Z"/>
+        </svg>
+      </div>
+      <p>Sua marca não se destaca em um mercado competitivo.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SOLUÇÃO -->
+<section>
+<div class="solucao">
+<h2>A Solução Definitiva</h2>
+<p>Criamos páginas modernas e altamente estratégicas, pensadas para gerar impacto visual, autoridade e conversão real.</p>
+</div>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section>
+<h2>O Que Você Vai Conquistar</h2>
+<div class="beneficios">
+
+<div class="card">
+<div class="icon">
+<svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#D94A1E" stroke-width="2">
+<path d="M3 17L9 11L13 15L21 7"/>
+</svg>
+</div>
+<h3>Mais Vendas</h3>
+<p>Estrutura otimizada para conversão máxima.</p>
+</div>
+
+<div class="card">
+<div class="icon">
+<svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#D94A1E" stroke-width="2">
+<circle cx="12" cy="12" r="10"/>
+</svg>
+</div>
+<h3>Autoridade</h3>
+<p>Visual sofisticado que posiciona sua marca como referência.</p>
+</div>
+
+<div class="card">
+<div class="icon">
+<svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#D94A1E" stroke-width="2">
+<path d="M12 2L15 9H22L17 13L19 21L12 17L5 21L7 13L2 9H9L12 2Z"/>
+</svg>
+</div>
+<h3>Crescimento Escalável</h3>
+<p>Estratégia construída para crescimento contínuo.</p>
+</div>
+
+</div>
+</section>
+
+<!-- PROVA SOCIAL -->
+<section>
+<h2>Resultados Comprovados</h2>
+<div class="depoimentos">
+<div class="depoimento">
+<div class="estrelas">★★★★★</div>
+<p>"Minha conversão dobrou em 30 dias."</p>
+<strong>— Cliente Real</strong>
+</div>
+<div class="depoimento">
+<div class="estrelas">★★★★★</div>
+<p>"Visual extremamente profissional."</p>
+<strong>— Empresária</strong>
+</div>
+</div>
+</section>
+
+<!-- OFERTA -->
+<section id="oferta">
+<div class="oferta">
+<h2>Oferta Especial</h2>
+<p class="preco-antigo">De R$1.997</p>
+<p class="preco-novo">Por R$457</p>
+<p>Bônus exclusivos inclusos por tempo limitado.</p>
+<br>
+<a href="#" class="btn btn-primary">GARANTIR MINHA VAGA</a>
+</div>
+</section>
+
+<!-- GARANTIA -->
+<section class="garantia">
+<h2>Garantia Incondicional de 7 Dias</h2>
+<p>Se você não ficar satisfeito, devolvemos 100% do seu investimento. Risco zero.</p>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final">
+<h2>Seu Negócio Merece Um Novo Nível</h2>
+<a href="#oferta" class="btn btn-primary">COMEÇAR AGORA</a>
+<p style="opacity:0.7;margin-top:20px;">O momento certo é agora.</p>
+</section>
+
+</div>
+    
+    <script>
+const bg = document.querySelector('.bg-geometry');
+
+for(let i=0;i<15;i++){
+  const box = document.createElement('span');
+
+  let size = Math.random()*80 + 20;
+
+  box.style.width = size + "px";
+  box.style.height = size + "px";
+
+  box.style.left = Math.random()*100 + "%";
+  box.style.bottom = "-150px";
+
+  box.style.animationDuration = (Math.random()*20 + 10) + "s";
+  box.style.animationDelay = Math.random()*10 + "s";
+
+  bg.appendChild(box);
+}
+</script>
+</body>
+</html>
